@@ -1,0 +1,2 @@
+execute store result score #ID glacier_players.pid store result storage glacier_pid.macro saved_ids int 1 run data get storage glacier_pid.macro lost_playerid[0].id
+function glacier_players:player/pid/id_regive with storage glacier_pid.macro

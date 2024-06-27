@@ -1,3 +1,9 @@
 ##Start ID Process
-execute store result storage minecraft:glacier_pid.macro playerid int 1 run scoreboard players set #ID glacier_players.pid 1
-execute unless score @s glacier_players.pid matches 1.. run function glacier_players:player/pid/id_assign_process with storage minecraft:glacier_pid.macro
+#Get number of total IDs currently active
+execute store result score #ID glacier_players.pid run data get storage glacier_pid.macro playerid
+#Add by 1
+execute store result storage glacier_pid.macro saved_ids int 1 run scoreboard players add #ID glacier_players.pid 1
+
+data modify storage glacier_pid.macro saved_name set from entity @s CustomName
+
+function glacier_players:player/pid/id_assign_process

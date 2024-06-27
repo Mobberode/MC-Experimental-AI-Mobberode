@@ -1,8 +1,12 @@
-##Store ID Info
-$data modify storage glacier_pid.macro playerid append value {id:$(saved_ids),name:$(saved_name)}
+##Set and Remove
+$data modify storage glacier_pid.macro playerid[{id:$(saved_ids)}] set from storage glacier_pid.macro lost_playerid[0]
+data remove storage glacier_pid.macro lost_playerid[0]
+
+##Store ID info
+$data modify storage glacier_pid.macro playerid[{id:$(saved_ids)}].name set value $(saved_name)
 scoreboard players operation @s glacier_players.pid = #ID glacier_players.pid
 
-#Give Tags
+#Add Tags
 tag @s add glacier_players.processed_id
 $tag @s add gp.id$(saved_ids)
 

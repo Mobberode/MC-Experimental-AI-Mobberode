@@ -5,5 +5,8 @@ function glacier_players:player/recurring_functions/dual_macros_all with storage
 ##Chat
 function glacier_players:player/disconnect/disconnect_speak
 
+##Transfer ID
+function glacier_players:player/pid/id_transfer with storage glacier_players.abnormal_macro
+
 ##Disconnect
 function glacier_players:player/disconnect/disconnect

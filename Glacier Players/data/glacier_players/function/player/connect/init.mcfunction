@@ -1,6 +1,6 @@
 tag @s remove GP.Connecting
 
-execute unless score @s glacier_players.pid matches 1.. run function glacier_players:player/pid/begin_id_assign
+function glacier_players:player/pid/begin_id_assign
 
 function glacier_players:player/recurring_functions/set_player
 

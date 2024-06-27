@@ -1,7 +1,0 @@
-You can make modded items such as the tomato from the farmers delight mod compatbible with Glacier Players!
-
-You will have to make compatibilty with them yourself in .mcfunction
-You can copy from the Glacier's code!
-
-Example:
-$execute if items entity @s horse.$(player_inv_slot) farmers_delight:beef_stew as @e[limit=1,tag=GlacierPlayer.Player_Selected] run function ext_template:player/foods/farmers_delight/beef_stew
